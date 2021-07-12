@@ -7,7 +7,7 @@ def calculoDiametro(raio)
 end
 
 diametro = calculoDiametro(raio)
-puts "O diâmetro de um círculo cujo raio vale " + raio.to_s + " é igual a " + diametro.to_s + "."
+puts "O diâmetro de um círculo cujo raio mede " + raio.to_s + " é igual a " + diametro.to_s + "."
 
 
 #funcao para calculo de comprimento de um circulo
@@ -17,7 +17,7 @@ def calculoComprimento(diametro)
 end
 
 comprimento = calculoComprimento (diametro)
-puts "O comprimento de um círculo cujo diametro vale " + diametro.to_s + " é igual a " + comprimento.to_s + "."
+puts "O comprimento de um círculo cujo diametro mede " + diametro.to_s + " é igual a " + comprimento.to_s + "."
 
 
 #funcao para calculo da area de um circulo
@@ -27,4 +27,4 @@ def calculoArea(raio)
 end
 
 area = calculoArea(raio)
-puts "A área de um círculo cujo raio vale " + raio.to_s + " é igual a " + area.to_s + "."
+puts "A área de um círculo cujo raio mede " + raio.to_s + " é igual a " + area.to_s + "."
