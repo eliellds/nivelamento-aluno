@@ -1,12 +1,16 @@
+puts "Programa para calcular diâmetro, comprimento e área de um círculo."
+puts
+print "Por favor, informe o raio do círculo: "
+raio = gets.chomp
+raio = raio.to_f
+puts
+
 #funcao para calculo do diametro de um circulo
 def calculoDiametro(raio)
     return raio * 2
 end
 
-raio = 14.5
 diametro = calculoDiametro(raio)
-puts "O diâmetro de um círculo cujo raio mede " + raio.to_s + " é igual a " + diametro.to_s + "."
-
 
 #funcao para calculo de comprimento de um circulo
 def calculoComprimento(raio)
@@ -14,14 +18,16 @@ def calculoComprimento(raio)
 end
 
 comprimento = calculoComprimento(raio)
-puts "O comprimento de um círculo cujo diametro mede " + diametro.to_s + " é igual a " + comprimento.to_s + "."
-
 
 #funcao para calculo da area de um circulo
 def calculoArea(raio)
     return raio ** 2 * Math::PI
 end
 
-raio = 14.5
 area = calculoArea(raio)
-puts "A área de um círculo cujo raio mede " + raio.to_s + " é igual a " + area.to_s + "."
+
+puts "As medidas de um círculo cujo raio mede " + raio.to_s + " são:"
+puts
+puts "Diâmetro: " + diametro.to_s
+puts "Comprimento: " + comprimento.to_s
+puts "Área: " + area.to_s
