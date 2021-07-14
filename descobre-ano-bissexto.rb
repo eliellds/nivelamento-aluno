@@ -1,7 +1,7 @@
 puts "Programa para descobrir se um ano é bissexto"
 puts
 print "Insira um ano: "
-ano = gets.to_i
+ano = gets.chomp.to_i
 
 #funcao para descobrir se um ano e bissexto
 def descobrirAnoBissexto(ano)
