@@ -26,8 +26,8 @@ end
 
 area = calculoArea(raio)
 
-puts "As medidas de um círculo cujo raio mede " + raio.to_s + " são:"
+puts "As medidas de um círculo cujo raio mede " + raio.truncate(3).to_s + " são:"
 puts
-puts "Diâmetro: " + diametro.to_s
-puts "Comprimento: " + comprimento.to_s
-puts "Área: " + area.to_s
+puts "Diâmetro: " + diametro.truncate(3).to_s
+puts "Comprimento: " + comprimento.truncate(3).to_s
+puts "Área: " + area.truncate(3).to_s
