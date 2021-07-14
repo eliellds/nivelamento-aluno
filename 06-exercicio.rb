@@ -2,23 +2,23 @@
 def fasePandemica(taxaDeVacinacao, fatorDeTransmissao, taxaOcupacionalDeLeitos)
     if taxaDeVacinacao >= 0.0 && taxaDeVacinacao <= 1.0 && fatorDeTransmissao >= 0.0 && taxaOcupacionalDeLeitos >= 0.0 && taxaOcupacionalDeLeitos <= 1.0
         if taxaDeVacinacao <= 0.8 && taxaOcupacionalDeLeitos > 0.9
-                return "FASE ROXA"
+            return "FASE ROXA"
         elsif taxaDeVacinacao <= 0.8 && (fatorDeTransmissao >= 1.0 || taxaOcupacionalDeLeitos > 0.8)
-                return "FASE VERMELHA"
+            return "FASE VERMELHA"
         elsif taxaDeVacinacao <= 0.8 && fatorDeTransmissao < 1.0 && taxaOcupacionalDeLeitos > 0.65
-                return "FASE LARANJA"
+            return "FASE LARANJA"
         elsif taxaDeVacinacao <= 0.8 && fatorDeTransmissao < 1.0 && taxaOcupacionalDeLeitos > 0.5
-                return "FASE AMARELA"
+            return "FASE AMARELA"
         elsif taxaDeVacinacao <= 0.8 && fatorDeTransmissao < 1.0 && taxaOcupacionalDeLeitos <= 0.5
-                return "FASE VERDE"
+            return "FASE VERDE"
         else
             return "FASE AZUL"
         end
     else
         if taxaDeVacinacao < 0.0 || taxaDeVacinacao > 1.0
             return "Taxa de vacinação deve ser um número entre 0.0 e 1.0 (1.0 = 100%)"
-        elsif fatorDeTransmissao < 0.0 
-                 return "Fator de transmissão dever ser um número maior ou igual a zero"
+        elsif fatorDeTransmissao < 0.0
+            return "Fator de transmissão dever ser um número maior ou igual a zero"
         else
             return "Taxa de ocupação de leitos deve ser um número entre 0.0 e 1.0 (1.0 = 100%)"
         end
