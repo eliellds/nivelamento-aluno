@@ -15,7 +15,7 @@ def calcularMMC(numero1, numero2)
     return resultado
 end
 
-puts "Prograga para calcular MMC"
+puts "Programa para calcular MMC"
 puts
 puts "Insira dois números inteiros: "
 
