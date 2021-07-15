@@ -3,7 +3,6 @@ def calcularMMC(numero1, numero2)
         resultado = 0
     else
         mmc = 1
-        resultado = 0
         while mmc >= 1
             if mmc / numero1 == numero2 && mmc / numero2 == numero1
                 resultado = mmc
@@ -18,7 +17,7 @@ end
 
 puts "Prograga para calcular MMC"
 puts
-puts "Insira dois números: "
+puts "Insira dois números inteiros: "
 
 numero1 = gets.chomp.to_i
 numero2 = gets.chomp.to_i
