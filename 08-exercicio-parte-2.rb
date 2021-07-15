@@ -2,9 +2,9 @@ def calcularMMC(numero1, numero2)
     if numero1 == 0 || numero2 == 0
         resultado = 0
     else
-        mmc= 2
+        mmc = 1
         resultado = 0
-        while mmc >= 2
+        while mmc >= 1
             if mmc / numero1 == numero2 && mmc / numero2 == numero1
                 resultado = mmc
                 break
