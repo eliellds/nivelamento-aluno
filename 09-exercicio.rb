@@ -1,9 +1,3 @@
-# Exercício 09
-# A partir da versão 2 do jogo de adivinhação, faça uma nova versão em que o jogador receba a informação, após chutar o número, se o chute foi maior ou menor que o número pensado. A seguir, ele ganha uma nova tentativa, de modo que o jogo somente vai terminar quando ele acertar.
-# Ao final, após acertar, informe o número de tentativas que o jogador teve para acertar.
-# Observação: valide o chute do jogador, ignorando a tentativa caso ele informe um numero invalido.
-# Enviar como 09-exercicio.rb (edited)
-
 puts "Bem-vindo ao jogo de adivinhação!"
 puts "O computador pensou em um número entre 0 e 100. Tente adivinhar!"
 
@@ -11,6 +5,7 @@ puts "O computador pensou em um número entre 0 e 100. Tente adivinhar!"
 numero = rand(0..100)
 puts "(" + numero.to_s + ")"
 
+# funcao para verificar se o numero digirado eh valido ou nao
 def validadorChute(chute)
     if chute == "0"
         return true

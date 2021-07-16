@@ -1,3 +1,4 @@
+# funcao para calcular tabuada de 0 a 10
 def calculoTabuada(numero)
     for tabuada in (0..10)
         resultado = numero * tabuada
