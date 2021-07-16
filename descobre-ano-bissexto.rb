@@ -5,7 +5,7 @@ ano = gets.chomp.to_i
 
 #funcao para descobrir se um ano e bissexto
 def descobrirAnoBissexto(ano)
-    if ano%4 & ano%400 == 0
+    if ano%4 == 0 && ano%400 == 0
         return true
     else
         return false
