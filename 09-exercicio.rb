@@ -18,7 +18,7 @@ end
 
 tentativas = 0
 chute = gets.chomp
-while
+while true
     if validadorChute(chute) == false 
         puts "Chute inválido! Tente novamente."
         chute = gets.chomp
@@ -28,11 +28,11 @@ while
         break
     else
         if chute.to_i < numero
-            puts "Errou! O número correto é maior que o digitado. Tente novamente."
+            puts "Errou! O número correto é MAIOR que o digitado. Tente novamente."
             tentativas = tentativas + 1
             chute = gets.chomp
         elsif chute.to_i > numero
-            puts "Errou! O número correto é menor que o digitado. Tente novamente."
+            puts "Errou! O número correto é MENOR que o digitado. Tente novamente."
             tentativas = tentativas + 1
             chute = gets.chomp
         end
