@@ -14,4 +14,3 @@ end
 encontrando = [ 33, 4, 76, 0, 13, 4, 76 ]
 
 puts posicaoNoArray(encontrando, 76)
-
