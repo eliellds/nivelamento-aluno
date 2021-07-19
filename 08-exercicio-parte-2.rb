@@ -3,18 +3,18 @@ def calculaMMC(numero1, numero2)
     x = numero1
     y = numero2
     resultado = 1
-    contador = 2
+    divisor = 2
     until x == 1 && y == 1
-        if x%contador == 0 || y%contador == 0
-            resultado = resultado * contador
-            if x%contador == 0
-                x = x / contador
+        if x%divisor == 0 || y%divisor == 0
+            resultado = resultado * divisor
+            if x%divisor == 0
+                x = x / divisor
             end
-            if y%contador == 0
-                y = y / contador
+            if y%divisor == 0
+                y = y / divisor
             end
         else
-            contador = contador + 1
+            divisor = divisor + 1
         end
     end
     return resultado
@@ -49,22 +49,16 @@ while resultado == false
             puts "MMC de 0 e outro número é: 0\nO número 0 é múltiplo de todos os números naturais."
             resultado = true
         elsif numero1.to_i < 0 || numero2.to_i < 0
-            if numero1.to_i < 0 && numero2.to_i < 0
+            if numero1.to_i < 0
                 numero1 = numero1.to_i * (-1)
-                numero2 = numero2.to_i * (-1)
-                puts "MMC de -" + numero1.to_s + " e -" + numero2.to_s + " é: -" + calculaMMC(numero1, numero2).to_s
-                resultado = true
-            else
-                if numero1.to_i < 0
-                    numero1 = numero1.to_i * (-1)
-                else
-                    numero2 = numero2.to_i * (-1)
-                end
-                numero1 = numero1.to_i
-                numero2 = numero2.to_i
-                puts "MMC de " + numero1.to_s + " e " + numero2.to_s + " é: " + calculaMMC(numero1, numero2).to_s
-                resultado = true
             end
+            if numero2.to_i < 0
+                numero2 = numero2.to_i * (-1)
+            end
+            numero1 = numero1.to_i
+            numero2 = numero2.to_i
+            puts "MMC de " + numero1.to_s + " e " + numero2.to_s + " é: " + calculaMMC(numero1, numero2).to_s
+            resultado = true
         else
             numero1 = numero1.to_i
             numero2 = numero2.to_i
