@@ -28,26 +28,21 @@ linhaUm = false
 centro = 1
 base = false
 limite = 10
-until linhaUm == true && centro > (limite-2) && base == true
+until linhaUm == true && base == true
     if linhaUm == false
         for cima in (1..limite)
             print "*"
         end
         linhaUm = true
         puts
-    elsif centro <= (limite-2)
-        until centro > (limite-2)
-            for esquerda in (1..1)
-                print "*"
-                for meio in (1..limite-2)
-                    print "x"
-                end
-                for direita in (1..1)
-                    print "*"
-                end
+    elsif
+        until centro == (limite-2)
+            print "*"
+            for meio in (1..limite-2)
+                print "x"
             end
+            puts "*"
             centro = centro + 1
-            puts
         end
     else
         for base in (1..limite)
