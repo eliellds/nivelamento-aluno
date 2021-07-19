@@ -17,12 +17,16 @@ def insereNoArray(array, valor, posicao)
     end
 end
 
-grid = [ "Hamilton", "Bottas", "Verstapen", "Perez", "Leclerc", "Norris" ]
+grid = ["Hamilton", "Bottas", "Verstapen", "Perez", "Leclerc", "Norris", "Ricciardo", "Sainz", "Vettel"]
 
 piloto = "Alonso"
-posicao = 4
+posicao = 20
 if insereNoArray(grid, piloto, posicao) == false
     puts "Ayrton Senna Eterno!"
 else 
-    puts grid
+    largada = 1
+    for imprimir in (0..grid.size-1)
+        puts largada.to_s + "ª posição: " + grid[imprimir]
+        largada = largada + 1
+    end
 end
