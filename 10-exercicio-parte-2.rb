@@ -10,13 +10,11 @@
 #         *********
 #         **********
 
-def imprimeTriangulo(base)
-    for numero in (1..base)
-        for linhas in (1..numero)
-            print "*"
-        end
-        puts
+numero = 1
+while numero <= 10
+    for linhas in (1..numero)
+        print "*"
     end
+    numero = numero + 1
+    puts
 end
-
-imprimeTriangulo(10)
