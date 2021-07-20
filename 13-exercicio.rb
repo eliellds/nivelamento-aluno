@@ -3,19 +3,40 @@
 # Se a posição alvo estiver fora do limite do array e apontar para o primeiro ou último elemento, 
 # a função retorna o array inteiro.
 
+# primeira forma encontrada
+
+# def removeDaPosicao(array, posicao)
+#     if posicao <= 0 || posicao >= array.size-1
+#         return array
+#     else
+#         novoArray = []
+#         for manter in (0..posicao-1)
+#             novoArray[manter] = array[manter]
+#             for trocar in (posicao..array.size-2)
+#                 novoArray[trocar] = array[trocar+1]
+#             end
+#         end
+#     end
+#     return novoArray
+# end
+
+# versão após resolução
 def removeDaPosicao(array, posicao)
-    if posicao >= array.size || posicao == 0 || posicao == array.size-1
+    if posicao <= 0 || posicao >= array.size-1
         return array
     else
         novoArray = []
-        for remover in (0..posicao-1)
-            novoArray[remover] = array[remover]
-            for remover in (posicao..array.size-2)
-                novoArray[remover] = array[remover+1]
+        incrementar = 0
+        for manter in (0..array.size-1)
+            if posicao == manter
+                next
+            else
+                novoArray[incrementar] = array[manter]
+                incrementar = incrementar + 1
             end
         end
+        return novoArray
     end
-    return novoArray
 end
 
 def exibeArray(array)
