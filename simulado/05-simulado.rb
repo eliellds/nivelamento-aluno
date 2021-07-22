@@ -9,13 +9,17 @@
 # puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
 
 def mediana(array)
-    array = array.sort()
+    novo_array = array.sort()
     n = array.size.to_f
     soma = 0.0
     if array.size%2 != 0
-        return array[n/2.0].to_f
+        resultado = novo_array[n/2.0].to_f
+        return resultado
     else
-        return array[n/2.0]-1.0 + array[n/2.0] / 2.0
+        numero_1 = novo_array[n / 2.0 - 1.0]
+        numero_2 = novo_array[n / 2.0]
+        resultado = (numero_1 + numero_2) / 2.0
+        return resultado
     end
 end
 
@@ -28,4 +32,4 @@ puts
 puts(mediana([21, 0, 12, -2, 30]))
 puts
 
-puts(mediana([47 , 23, 1, 100, 75, -5]))
+puts(mediana([48 , 23, 1, 100, 75, -5]))

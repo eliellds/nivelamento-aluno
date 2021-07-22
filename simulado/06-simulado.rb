@@ -4,6 +4,8 @@
 # print(menor_maior([10, 0, -1, -500, 20, 100])) # deve imprimir [-500, 100]
 # puts
 
+# primeiro metodo encontrado
+
 def menor_maior(array)
 menor = array[0]
 maior = array[array.size-1]
@@ -32,6 +34,22 @@ maior = array[array.size-1]
     novo_array = [menor, maior]
     return novo_array
 end
+
+# # apos resolucao
+
+# def menor_maior(array)
+#     menor = array[0]
+#     maior = array[0]
+#     for x in (0..array.size-1)
+#         if array[x] < menor
+#             menor = array[x]
+#         elsif array[x] > maior
+#             maior = array[x]
+#         end
+#     end
+#     novo_array = [menor, maior]
+#     return novo_array
+# end
 
 print menor_maior([10, 0, -1, -500, 20, 100]) # deve imprimir [-500, 100]
 puts
