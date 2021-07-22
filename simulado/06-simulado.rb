@@ -5,24 +5,32 @@
 # puts
 
 def menor_maior(array)
-menor = nil
-maior = nil
-    for n in (1..array.size)
-        for x in (1..array.size-1)
-            if array[n-1] < array[x]
-                if menor == nil || array[n-1] < menor
-                    menor = array[n-1]
-                end
+menor = array[0]
+maior = array[array.size-1]
+    for x in (0..array.size-1)
+        if array[x+1] == nil
+            if array[x] < menor
+                menor = array[x]
             end
-            if array[n-1] > array[x]
-                if maior == nil || array[-1] > maior
-                    maior = array[n-1]
-                end
+        elsif array[x] < array[x+1]
+            if array[x] < menor
+                menor = array[x]
+            end
+        end
+    end
+    for y in (0..array.size-1)
+        if array[y+1] == nil
+            if array[y] > maior
+                menor = array[y]
+            end
+        elsif array[y] > array[y+1]
+            if array[y] > maior
+                maior = array[y]
             end
         end
     end
     novo_array = [menor, maior]
-        return novo_array
+    return novo_array
 end
 
 print menor_maior([10, 0, -1, -500, 20, 100]) # deve imprimir [-500, 100]
@@ -32,4 +40,10 @@ print menor_maior([300, 20, 21, 900, 58, 77])
 puts
 
 print menor_maior([-30, 47, 6, 99, 15, 2])
+puts
+
+print menor_maior([300, 20, 21, 900, 58, 1001])
+puts
+
+print menor_maior([300, 20, 21, 900, 58, -1001])
 puts
