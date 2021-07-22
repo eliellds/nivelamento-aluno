@@ -42,6 +42,7 @@ def calcula_media_movel(array_mortes, intervalo_dias)
             if repeticoes == intervalo_dias
                 novo_array[controle] = soma / intervalo_dias
                 controle = controle + 1
+                media = media + soma
                 soma = 0.0
             end
         end
