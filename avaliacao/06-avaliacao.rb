@@ -1,6 +1,6 @@
 # (valor = 2.0)
 # 6) O governo do Estado de SP registra o número de mortes por covid diariamente. No entanto, para publicar 
-#     os resultados de modo mais amigável, é necessário calcular a média móvel semanal.
+# os resultados de modo mais amigável, é necessário calcular a média móvel semanal.
 # Para auxiliar o secretário de Saúde, faça uma função chamada "calcula_media_movel", que deve receber 
 # como parâmetros um array com a série de registros de mortes diária por covid e o número de dias de intervalo 
 # para calcular as médias. Essa função deve retornar um novo array sendo que o valor de cada elemento 
@@ -35,20 +35,24 @@ def calcula_media_movel(array_mortes, intervalo_dias)
     soma = 0.0
     media = 0.0
     indice = 0
-    controle = 0
-    for indice in (1..intervalo_dias)
-        for repeticoes in (1..array_mortes.size)
-            soma = soma + array_mortes[repeticoes-1]
-            if repeticoes == intervalo_dias
-                novo_array[controle] = soma / intervalo_dias
-                controle = controle + 1
-                media = media + soma
-                soma = 0.0
-            end
+    comparacao = 0
+    sequencia = intervalo_dias-1
+    for n in (0..array_mortes.size-1)
+        soma = soma + array_mortes[n]
+        comparacao = comparacao + 1
+        if n == array_mortes.size-1
+            media = media + soma / comparacao
+            novo_array[indice] = media
+        elsif n == sequencia
+            media = media + soma / intervalo_dias
+            novo_array[indice] = media
+            soma = 0.0
+            media = 0.0
+            indice = indice + 1
+            comparacao = 0
+            sequencia = sequencia + intervalo_dias
         end
     end
-    media_final = media / (novo_array.size-1)
-    novo_array[novo_array.size] = media_final
     return novo_array
 end
 
