@@ -4,27 +4,19 @@
 # O ano é bissexto (tem 366 dias).
 # O ano não é um ano bissexto (tem 365 dias).
 
-puts "Programa para descobrir se um ano é bissexto"
-puts
-print "Insira um ano: "
-ano = gets.chomp.to_i
-
 # funcao para descobrir se um ano e bissexto
 def descobrirAnoBissexto(ano)
-    if ano%4 == 0
-        if ano%100 == 0
-            if ano%400 == 0
-                return true
-            else
-                return false
-            end
-        else
-            return true
-        end
+    if (ano % 4 == 0 && ano % 100 != 0) || (ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0)
+        return true
     else
         return false
     end
 end
+
+puts "Programa para descobrir se um ano é bissexto"
+puts
+print "Insira um ano: "
+ano = gets.chomp.to_i
 
 if descobrirAnoBissexto(ano) == true
     puts "O ano de " + ano.to_s + " é um ano bissexto."
